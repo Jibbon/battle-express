@@ -1,9 +1,10 @@
 var express = require('express');
 var app = express();
-var path = require('path');
 
 app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname + '/index.html'));
+  res.send({
+    "Output": "Hello World!"
+  });
 });
 
 app.post('/', function(req, res) {
